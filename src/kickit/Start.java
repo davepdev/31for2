@@ -32,12 +32,15 @@ public class Start {
 		Hand hand2 = new Hand();
 		ObjectMapper mapper = new ObjectMapper();
 		
-		for (int i = 0; i < 6; i++ ) {
+		int i = 0;
+		do {
 			card = deck.pop();
 			//card.displayCard();
 			hand1.addCard(card);
 			card = deck.pop();
 			hand2.addCard(card);
+			i++;
+		} while ( i < 6 );
 			
 /*		    PlayingCard cardFromJson = mapper.readValue(jsonStr, PlayingCard.class);
 		    
@@ -50,8 +53,7 @@ public class Start {
 			//System.out.println(card.getRank());
 			//System.out.println(card.getSuit().getSymbol());
 			//System.out.println(card.getSuit().getColor());
-		}
-
+	
 		System.out.println(hand1.getCards());
 		System.out.println(hand2.getCards());
 		
